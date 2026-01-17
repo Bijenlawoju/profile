@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bijen Lawoju - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0f0f0f;
+            color: #f1f1f1;
+            min-height: 100vh;
+        }
+
+        /* ============= HEADER / SEARCH BAR ============= */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 24px;
+            background-color: #0f0f0f;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .logo i {
+            color: #ff0000;
+            font-size: 32px;
+        }
+
+        .search-box {
+            display: flex;
+            flex: 1;
+            max-width: 600px;
+            margin: 0 40px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px 16px;
+            background-color: #121212;
+            border: 1px solid #303030;
+            border-radius: 20px 0 0 20px;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: #1c62b9;
+        }
+
+        .search-btn {
+            padding: 10px 24px;
+            background-color: #222222;
+            border: 1px solid #303030;
+            border-left: none;
+            border-radius: 0 20px 20px 0;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-icons i {
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .header-profile {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #5c8a8a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .header-profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ============= BANNER ============= */
+        .banner-container {
+            max-width: 1284px;
+            margin: 0 auto;
+            padding: 0 24px;
+            margin-top: 10px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 220px;
+            background-image: url('banner.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ============= PROFILE SECTION ============= */
+        .profile-section {
+            max-width: 1284px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            gap: 24px;
+        }
+
+        .profile-pic {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            background-color: #5c8a8a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            font-weight: 500;
+            color: #fff;
+            flex-shrink: 0;
+            margin-top: 8px;
+            border: 4px solid #0f0f0f;
+            overflow: hidden;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-name {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .profile-handle {
+            color: #aaaaaa;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .profile-stats {
+            color: #aaaaaa;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .profile-stats span {
+            margin-right: 8px;
+        }
+
+        .profile-desc {
+            color: #aaaaaa;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .profile-desc a {
+            color: #3ea6ff;
+            text-decoration: none;
+        }
+
+        .profile-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn-subscribe {
+            background-color: #fff;
+            color: #0f0f0f;
+        }
+
+        .btn-subscribe:hover {
+            background-color: #d9d9d9;
+        }
+
+        .btn-secondary {
+            background-color: #272727;
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            background-color: #3f3f3f;
+        }
+
+        /* ============= NAVIGATION TABS ============= */
+        .nav-tabs {
+            max-width: 1284px;
+            margin: 0 auto;
+            padding: 0 24px;
+            border-bottom: 1px solid #303030;
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-tab {
+            padding: 16px 0;
+            color: #aaaaaa;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .nav-tab:hover {
+            color: #f1f1f1;
+        }
+
+        .nav-tab.active {
+            color: #f1f1f1;
+            border-bottom-color: #f1f1f1;
+        }
+
+        /* ============= CONTENT SECTIONS ============= */
+        .content {
+            max-width: 1284px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* ============= HOME TAB ============= */
+        .section-title {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: #ff0000;
+        }
+
+        .featured-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .video-card {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .video-card:hover {
+            transform: scale(1.02);
+        }
+
+        .video-card a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .thumbnail {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .thumbnail-text {
+            font-size: 32px;
+            color: #4a4a4a;
+            font-weight: 500;
+        }
+
+        .thumbnail-badge {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background-color: #0f0f0f;
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .video-info {
+            display: flex;
+            gap: 12px;
+            padding: 12px 0;
+        }
+
+        .channel-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #5c8a8a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 500;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .channel-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-details {
+            flex: 1;
+        }
+
+        .video-title {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            color: #f1f1f1;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .video-meta {
+            font-size: 12px;
+            color: #aaaaaa;
+        }
+
+        /* ============= PROJECTS TAB ============= */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .project-card {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project-thumbnail {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: #2a2a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .project-thumbnail-text {
+            font-size: 28px;
+            color: #5a5a5a;
+            font-weight: 500;
+        }
+
+        .project-type-badge {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background-color: #0f0f0f;
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .project-info {
+            padding: 12px 16px;
+        }
+
+        .project-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #3ea6ff;
+            margin-bottom: 8px;
+        }
+
+        .project-author {
+            font-size: 12px;
+            color: #aaaaaa;
+            margin-bottom: 4px;
+        }
+
+        .project-stats {
+            font-size: 12px;
+            color: #aaaaaa;
+        }
+
+        /* ============= ABOUT TAB ============= */
+        .about-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .about-description h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .about-description p {
+            color: #aaaaaa;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .about-stats {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .about-stats h4 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #303030;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #303030;
+        }
+
+        .stat-item:last-child {
+            border-bottom: none;
+        }
+
+        .stat-label {
+            color: #aaaaaa;
+        }
+
+        .stat-value {
+            font-weight: 500;
+        }
+
+        .skills-section {
+            margin-top: 32px;
+        }
+
+        .skills-section h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: #272727;
+            color: #f1f1f1;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* ============= CONTACT TAB ============= */
+        .contact-section {
+            max-width: 800px;
+        }
+
+        .contact-section h3 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            transition: background-color 0.2s;
+        }
+
+        .contact-item:hover {
+            background-color: #272727;
+        }
+
+        .contact-item a {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            color: inherit;
+            width: 100%;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .contact-icon.gmail {
+            background-color: #ea4335;
+        }
+
+        .contact-icon.linkedin {
+            background-color: #0077b5;
+        }
+
+        .contact-icon.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        .contact-icon.github {
+            background-color: #333;
+        }
+
+        .contact-details {
+            flex: 1;
+        }
+
+        .contact-name {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .contact-value {
+            font-size: 14px;
+            color: #3ea6ff;
+        }
+
+        .contact-arrow {
+            color: #aaaaaa;
+        }
+
+        /* ============= FOOTER ============= */
+        .footer {
+            max-width: 1284px;
+            margin: 60px auto 0;
+            padding: 24px;
+            border-top: 1px solid #303030;
+            text-align: center;
+            color: #aaaaaa;
+            font-size: 12px;
+        }
+
+        /* ============= RESPONSIVE ============= */
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px 16px;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .profile-pic {
+                margin-top: -60px;
+            }
+
+            .profile-buttons {
+                justify-content: center;
+            }
+
+            .nav-tabs {
+                overflow-x: auto;
+                gap: 16px;
+            }
+
+            .featured-content,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="fab fa-youtube"></i>
+        </div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search">
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="header-icons">
+            <i class="fas fa-video"></i>
+            <i class="fas fa-bell"></i>
+            <div class="header-profile">
+                <img src="profile.jpg" alt="B" onerror="this.style.display='none'; this.parentElement.innerHTML='B';">
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner-container">
+        <div class="banner" aria-label="Channel banner for Bijen Lawoju"></div>
+    </div>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="profile-pic">
+            <img src="profile.jpg" alt="Bijen Lawoju" onerror="this.style.display='none'; this.parentElement.innerHTML='B';">
+        </div>
+        <div class="profile-info">
+            <h1 class="profile-name">Bijen Lawoju</h1>
+            <p class="profile-handle">@bijenlawoju</p>
+            <p class="profile-stats">
+                <span>1.2K subscribers</span>
+                <span>•</span>
+                <span>15 projects</span>
+            </p>
+            <p class="profile-desc">
+                Computer Engineering Student passionate about building innovative solutions.
+                <a href="#" onclick="showTab('about')">...more</a>
+            </p>
+            <div class="profile-buttons">
+                <button class="btn btn-subscribe">
+                    <i class="fas fa-bell"></i> Subscribe
+                </button>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-share"></i> Share
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+        <div class="nav-tab active" onclick="showTab('home')">Home</div>
+        <div class="nav-tab" onclick="showTab('projects')">Projects</div>
+        <div class="nav-tab" onclick="showTab('about')">About</div>
+        <div class="nav-tab" onclick="showTab('contact')">Contact</div>
+    </nav>
+
+    <!-- Content -->
+    <main class="content">
+        <!-- Home Tab -->
+        <div id="home" class="tab-content active">
+            <div class="section-title">
+                <i class="fas fa-fire"></i>
+                Featured Projects
+            </div>
+            <div class="featured-content">
+                <div class="video-card">
+                    <a href="https://github.com/Bijenlawoju" target="_blank">
+                        <div class="thumbnail">
+                            <span class="thumbnail-text">Project 1</span>
+                            <span class="thumbnail-badge">Web App</span>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-avatar">
+                                <img src="profile.jpg" alt="B" onerror="this.style.display='none'; this.parentElement.innerHTML='B';">
+                            </div>
+                            <div class="video-details">
+                                <div class="video-title">Full Stack Web Application - Modern Tech Stack</div>
+                                <div class="video-meta">Bijen Lawoju</div>
+                                <div class="video-meta">1.2k views • 2 weeks ago</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="https://github.com/Bijenlawoju" target="_blank">
+                        <div class="thumbnail">
+                            <span class="thumbnail-text">Project 2</span>
+                            <span class="thumbnail-badge">Mobile</span>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-avatar">
+                                <img src="profile.jpg" alt="B" onerror="this.style.display='none'; this.parentElement.innerHTML='B';">
+                            </div>
+                            <div class="video-details">
+                                <div class="video-title">Cross Platform Mobile Application</div>
+                                <div class="video-meta">Bijen Lawoju</div>
+                                <div class="video-meta">856 views • 1 month ago</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="https://github.com/Bijenlawoju" target="_blank">
+                        <div class="thumbnail">
+                            <span class="thumbnail-text">Project 3</span>
+                            <span class="thumbnail-badge">AI/ML</span>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-avatar">
+                                <img src="profile.jpg" alt="B" onerror="this.style.display='none'; this.parentElement.innerHTML='B';">
+                            </div>
+                            <div class="video-details">
+                                <div class="video-title">Machine Learning Project - Data Analysis</div>
+                                <div class="video-meta">Bijen Lawoju</div>
+                                <div class="video-meta">2.4k views • 3 months ago</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <i class="fas fa-clock"></i>
+                Recent Activity
+            </div>
+            <div class="featured-content">
+                <div class="video-card">
+                    <a href="https://github.com/Bijenlawoju" target="_blank">
+                        <div class="thumbnail">
+                            <span class="thumbnail-text">Latest</span>
+                            <span class="thumbnail-badge">Backend</span>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-avatar">
+                                <img src="profile.jpg" alt="B" onerror="this.style.display='none'; this.parentElement.innerHTML='B';">
+                            </div>
+                            <div class="video-details">
+                                <div class="video-title">REST API Development with Node.js</div>
+                                <div class="video-meta">Bijen Lawoju</div>
+                                <div class="video-meta">543 views • 5 days ago</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="https://github.com/Bijenlawoju" target="_blank">
+                        <div class="thumbnail">
+                            <span class="thumbnail-text">New</span>
+                            <span class="thumbnail-badge">Frontend</span>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-avatar">
+                                <img src="profile.jpg" alt="B" onerror="this.style.display='none'; this.parentElement.innerHTML='B';">
+                            </div>
+                            <div class="video-details">
+                                <div class="video-title">React Dashboard with Modern UI</div>
+                                <div class="video-meta">Bijen Lawoju</div>
+                                <div class="video-meta">789 views • 1 week ago</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Tab -->
+        <div id="projects" class="tab-content">
+            <div class="section-title">
+                <i class="fas fa-folder-open"></i>
+                All Projects
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <a href="https://github.com/Bijenlawoju" target="_blank">
+                        <div class="project-thumbnail">
+                            <span class="project-thumbnail-text">Project 1</span>
+                            <span class="project-type-badge">Web App</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-title">Amazing Project One - Full Stack Web Application</div>
+                            <div class="project-author">Bijen Lawoju</div>
+                            <div class="project-stats">1.2k views • 2 weeks ago</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="https://github.com/Bijenlawoju" target="_blank">
+                        <div class="project-thumbnail">
+                            <span class="project-thumbnail-text">Project 2</span>
+                            <span class="project-type-badge">Mobile</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-title">Awesome Mobile App - Cross Platform Solution</div>
+                            <div class="project-author">Bijen Lawoju</div>
+                            <div class="project-stats">856 views • 1 month ago</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="https://github.com/Bijenlawoju" target="_blank">
+                        <div class="project-thumbnail">
+                            <span class="project-thumbnail-text">Project 3</span>
+                            <span class="project-type-badge">AI/ML</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-title">Machine Learning Model - Predictive Analytics</div>
+                            <div class="project-author">Bijen Lawoju</div>
+                            <div class="project-stats">2.4k views • 3 months ago</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="https://github.com/Bijenlawoju" target="_blank">
+                        <div class="project-thumbnail">
+                            <span class="project-thumbnail-text">Project 4</span>
+                            <span class="project-type-badge">Backend</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-title">RESTful API - Scalable Backend Architecture</div>
+                            <div class="project-author">Bijen Lawoju</div>
+                            <div class="project-stats">678 views • 2 months ago</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="https://github.com/Bijenlawoju" target="_blank">
+                        <div class="project-thumbnail">
+                            <span class="project-thumbnail-text">Project 5</span>
+                            <span class="project-type-badge">Database</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-title">Database Design - Optimized Schema Implementation</div>
+                            <div class="project-author">Bijen Lawoju</div>
+                            <div class="project-stats">445 views • 4 months ago</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="https://github.com/Bijenlawoju" target="_blank">
+                        <div class="project-thumbnail">
+                            <span class="project-thumbnail-text">Project 6</span>
+                            <span class="project-type-badge">DevOps</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-title">CI/CD Pipeline - Automated Deployment System</div>
+                            <div class="project-author">Bijen Lawoju</div>
+                            <div class="project-stats">892 views • 5 months ago</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Tab -->
+        <div id="about" class="tab-content">
+            <div class="about-section">
+                <div class="about-description">
+                    <h3>About Me</h3>
+                    <p>
+                        Hello! I'm <strong>Bijen Lawoju</strong>, a passionate Computer Engineering student with a deep interest in software development, problem-solving, and creating innovative technological solutions.
+                    </p>
+                    <p>
+                        My journey in computer science began with curiosity about how things work, and it has evolved into a full-fledged passion for building applications that make a difference. I enjoy working on challenging projects that push the boundaries of what's possible.
+                    </p>
+                    <p>
+                        Currently pursuing my degree in Computer Engineering, I'm constantly learning new technologies and frameworks to stay at the forefront of the ever-evolving tech landscape. From web development to machine learning, I love exploring various domains of computer science.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with fellow developers. I believe in the power of community and collaboration in driving innovation forward.
+                    </p>
+
+                    <div class="skills-section">
+                        <h3>Skills & Technologies</h3>
+                        <div class="skills-grid">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Data Structures</span>
+                            <span class="skill-tag">Algorithms</span>
+                            <span class="skill-tag">C/C++</span>
+                            <span class="skill-tag">Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <h4>Channel Stats</h4>
+                    <div class="stat-item">
+                        <span class="stat-label">Subscribers</span>
+                        <span class="stat-value">1,234</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Total Projects</span>
+                        <span class="stat-value">15</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Total Views</span>
+                        <span class="stat-value">12.5K</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Joined</span>
+                        <span class="stat-value">Jan 2024</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Location</span>
+                        <span class="stat-value">Nepal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Tab -->
+        <div id="contact" class="tab-content">
+            <h3 class="section-title">
+                <i class="fas fa-envelope"></i>
+                Get In Touch
+            </h3>
+            <div class="contact-links">
+                <div class="contact-item">
+                    <a href="mailto:bijenlawoju@gmail.com">
+                        <div class="contact-icon gmail">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-name">Email</div>
+                            <div class="contact-value">bijenlawoju@gmail.com</div>
+                        </div>
+                        <div class="contact-arrow">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://www.linkedin.com/in/bijen-lawoju-b1ab02372/" target="_blank">
+                        <div class="contact-icon linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-name">LinkedIn</div>
+                            <div class="contact-value">linkedin.com/in/bijen-lawoju-b1ab02372</div>
+                        </div>
+                        <div class="contact-arrow">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://www.instagram.com/bijenlawoju/" target="_blank">
+                        <div class="contact-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-name">Instagram</div>
+                            <div class="contact-value">instagram.com/bijenlawoju</div>
+                        </div>
+                        <div class="contact-arrow">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://github.com/Bijenlawoju" target="_blank">
+                        <div class="contact-icon github">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-name">GitHub</div>
+                            <div class="contact-value">github.com/Bijenlawoju</div>
+                        </div>
+                        <div class="contact-arrow">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Bijen Lawoju. All rights reserved. Built with ❤️</p>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            // Remove active class from all tabs and content
+            document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            // Add active class to selected tab and content
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+            
+            // Scroll to top of content
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
